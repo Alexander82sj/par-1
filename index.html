@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRUD de estudiantes</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="contenedor">
+        <header>
+            <p class="etiqueta">Primer parcial</p>
+            <h1>Gestión de estudiantes</h1>
+            <p>Proyecto.</p>
+        </header>
+
+        <section class="tarjeta" aria-labelledby="tituloFormulario">
+            <h2 id="tituloFormulario">Registrar estudiante</h2>
+
+            <form id="formulario" novalidate>
+                <label for="nombre">Nombre del estudiante</label>
+
+                <div class="entrada">
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Escribe el nombre completo"
+                        autocomplete="off"
+                        aria-describedby="mensaje"
+                    >
+
+                    <button type="submit" id="btnAgregar" class="primario">
+                        Agregar
+                    </button>
+
+                    <button type="button" id="btnCancelar" hidden>
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+
+            <p
+                id="mensaje"
+                class="mensaje"
+                role="status"
+                aria-live="polite"
+            >
+                Escribe un nombre para comenzar.
+            </p>
+        </section>
+
+        <section class="tarjeta" aria-labelledby="tituloLista">
+            <div class="cabeceraLista">
+                <div>
+                    <h2 id="tituloLista">Estudiantes registrados</h2>
+                    <p id="contador">0 estudiantes</p>
+                </div>
+
+                <button type="button" id="btnLimpiar" class="eliminar">
+                    Limpiar lista
+                </button>
+            </div>
+
+            <p id="vacio" class="vacio">
+                La lista está vacía. Agrega tu primer estudiante.
+            </p>
+
+            <ul id="lista" aria-label="Lista de estudiantes"></ul>
+        </section>
+
+        <footer>
+            José Alexander · Matrícula: 2021-0540
+        </footer>
+    </main>
+</body>
+</html>
